@@ -1,0 +1,70 @@
+import requests
+
+class Puxando_API():
+    def __init__(self):
+        self.url_geral = 'https://swapi.dev/api/'
+        self.url_planeta = "https://swapi.dev/api/planets/"
+
+
+
+    def get_planeta(self):
+        swapi = requests.get(self.url_geral)
+        swapi = swapi.json()
+        swapi_planeta_get = requests.get(self.url_planeta)
+        swapi_planeta_get = swapi_planeta_get.json()
+        return swapi_planeta_get
+
+
+
+    def montar_lista_dos_habitantes(self,links_habitantes):
+        try:
+            lista_habitante = []
+            for habitantes in links_habitantes:
+                pegar_link = requests.get(habitantes)
+                pegar_link = pegar_link.json()
+                nome_habitante = pegar_link['name']
+                lista_habitante.append(nome_habitante)
+            return (lista_habitante)
+        except:
+            return links_habitantes
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#só pra transformar em maiuscula
+# from flask import Flask, request, render_template
+#
+# app = Flask(__name__)
+#
+# @app.route('/')
+# def my_form():
+#     return render_template('index.html')
+#
+# @app.route('/', methods=['POST'])
+# def my_form_post():
+#     text = request.form['texto']
+#     processed_text = text.upper()
+#     return processed_text
+#
+# if __name__ == "__main__":
+#     app.run(debug=True)

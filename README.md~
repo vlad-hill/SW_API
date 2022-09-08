@@ -1,5 +1,5 @@
-                                                           -DESAFIO SWAPI-
-LORE:
+                                                         <h1>DESAFIO SWAPI</h1>
+> LORE:
 .Esse projeto tem como finalidade fazer uma integração com a swapi para pegar os nomes dos habitantes do planeta escrito pelo cliente.
 .Criado em python usando a IDE Pycharm esse projeto utliza arquivos .py e .html para rodar.
 .Pode se dizer que essa é a mk.1 do desafio, mesmo ele tendo passado por muitos buffs e nerfs essa seria a versão mais palpavel.
